@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แนะนำตัว - ธีรนัย ไชยกันทะ</title>
+
+    <style>
+        /* === ตั้งค่าพื้นฐานของหน้าเว็บ === */
+        body {
+            font-family: "Segoe UI", sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #eef3f8;
+            color: #333;
+        }
+
+        /* === ส่วนหัวแบบไล่เฉด + เงา === */
+        header {
+            background: linear-gradient(135deg, #0066ff, #00ccff);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        /* เมนูนำทางแบบ horizontal */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        /* ลิงก์เมนู */
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: 0.2s;
+        }
+        nav a:hover { opacity: 0.7; }
+
+        /* กล่องเนื้อหาหลัก */
+        main {
+            width: 92%;
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        h2 { color: #0066cc; }
+
+        /* รูปโปรไฟล์ – ปรับขนาด + เงา */
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 170px; /* ← ขนาดรูป */
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        /* ตารางข้อมูล */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 15px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        th {
+            background: #0066ff;
+            color: white;
+            padding: 12px;
+        }
+        td {
+            padding: 12px;
+            background: #fafafa;
+        }
+
+        /* ช่องกรอกฟอร์ม */
+        form input, form textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #bbb;
+            margin-top: 5px;
+            font-size: 1rem;
+            transition: 0.2s;
+        }
+        form input:focus, form textarea:focus {
+            border-color: #0066ff;
+            outline: none;
+            box-shadow: 0 0 6px rgba(0,102,255,0.3);
+        }
+
+        /* ปุ่มส่งฟอร์ม */
+        button {
+            background: #0066ff;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            margin-top: 12px;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 8px;
+            transition: 0.2s;
+        }
+        button:hover {
+            background: #004fcc;
+        }
+
+        /* ปุ่ม social */
+        .social a {
+            display: inline-block;
+            margin-top: 10px;
+            background: #005ecc;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+        .social a:hover {
+            background: #003f88;
+        }
+
+        /* ส่วนท้ายเว็บ */
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #777;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ========== ส่วนหัวเว็บ ========== -->
+    <header>
+        <h1>ธีรนัย ไชยกันทะ</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">เกี่ยวกับฉัน</a></li>
+                <li><a href="#skills">ทักษะ</a></li>
+                <li><a href="#contact">ติดต่อ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ========== เนื้อหาหลัก ========== -->
+    <main>
+
+        <!-- ข้อมูลแนะนำตัว -->
+        <section id="about">
+            <h2>เกี่ยวกับฉัน</h2>
+            <p>สวัสดีครับ! ผมชื่อ <strong>ธีรนัย ไชยกันทะ</strong> กำลังฝึกเขียนเว็บด้วย HTML5</p>
+            <p>ผมชอบเรียนรู้เทคโนโลยีใหม่ ๆ และพัฒนาเว็บไซต์</p>
+
+            <!-- รูปโปรไฟล์ -->
+            <img src="f001.jpg" alt="รูปโปรไฟล์ของธีรนัย">
+        </section>
+
+        <!-- ทักษะ -->
+        <section id="skills">
+            <h2>ทักษะของฉัน</h2>
+            <ul>
+                <li>เขียนโปรแกรมเบื้องต้น</li>
+                <li>ออกแบบเว็บไซต์ด้วย HTML/CSS</li>
+                <li>เรียนรู้เร็วและทำงานเป็นทีมได้</li>
+            </ul>
+        </section>
+
+        <!-- ตารางข้อมูลติดต่อ -->
+        <section>
+            <h2>ข้อมูลติดต่อ</h2>
+            <table>
+                <tr>
+                    <th colspan="2">ข้อมูลส่วนตัว</th>
+                </tr>
+                <tr>
+                    <td>อีเมล</td>
+                    <td>filmgg.com@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>เบอร์โทร</td>
+                    <td>093-043-0558</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- แบบฟอร์มส่งข้อความ -->
+        <section id="contact">
+            <h2>แบบฟอร์มติดต่อ</h2>
+            <form>
+                <label>ชื่อ:</label>
+                <input type="text" name="fullname">
+
+                <label>อีเมล:</label>
+                <input type="email" name="email">
+
+                <label>ข้อความ:</label>
+                <textarea name="message" rows="4"></textarea>
+
+                <button type="submit">ส่งข้อความ</button>
+            </form>
+        </section>
+
+        <!-- Social -->
+        <section class="social">
+            <h2>โซเชียลมีเดียของฉัน</h2>
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+        </section>
+
+    </main>
+
+    <!-- ========== ส่วนท้ายเว็บ ========== -->
+    <footer>
+        <p>© 2025 Teeranai Chaikanta</p>
+    </footer>
+
+</body>
+</html>
