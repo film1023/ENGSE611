@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* 1. ให้ html และ body มีขนาดเต็มจอ 100% */
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;  /* ลบระยะขอบเริ่มต้น */
+            padding: 0; /* ลบ padding เริ่มต้น */
+        }
+        /* 2. กล่องหลักให้กินพื้นที่เต็มจอ และจัดเนื้อหาไว้กลางจอ */
+        #main {
+            width: 100%;             /* กว้าง 100% ของหน้าจอ */
+            height: 100%;            /* สูง 100% ของหน้าจอ */
+            background-color: #4a90e2; /* สีพื้นหลังให้เห็นชัด */
+            display: flex;           /* ใช้ Flexbox เพื่อจัดข้อความให้อยู่กลาง */
+            justify-content: center; /* จัดกึ่งกลางแนวนอน */
+            align-items: center;     /* จัดกึ่งกลางแนวตั้ง */
+            color: white;            /* สีข้อความ */
+            font-size: 32px;         /* ขนาดตัวอักษร */
+        }
+    </style>
+</head>
+<body>
+
+    <div id="main">
+        ข้อความอยู่กึ่งกลางหน้าจอ
+    </div>
+
+</body>
+</html>

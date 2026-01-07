@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-box {
+            display: flex;
+            flex-direction: row;
+            gap: 10px; 
+            background: #f0f0f0;
+            padding: 15px;
+            border: 2px solid #ccc;
+            height: 150px;
+        }
+        .item {
+            background: navy;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 20px;
+            width: 80px;
+        }
+        .stretch .item{
+            background: teal;
+        }
+    </style>
+</head>
+<body>
+    <h2>1) Justify-content: cemter</h2>
+    <div class="flex-box" style="justify-content: center;">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+    <h2>2) Justify-content: space-between</h2>
+    <div class="flex-box" style="justify-content: space-between;">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+    <h2>3) Align-items: stretch</h2>
+    <div class="flex-box stretch" style="align-items: stretch;">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>    
+</body>
+</html>

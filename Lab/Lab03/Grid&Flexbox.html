@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* --- Grid Container (โครงสร้างหลักของ Navbar) --- */
+        .menu-container {
+            display: grid; 
+            grid-template-columns: 200px 1fr; 
+            grid-template-rows: 50px;
+            align-items: center; 
+            background-color: #f15353; 
+            color: rgb(31, 29, 29);
+            padding: 10px 20px;
+        }
+        /* --- Logo --- */
+        .logo {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        /* --- Menu ใช้ Flexbox เพื่อเรียงเมนูแนวนอน --- */
+        ul {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            gap: 20px; 
+            margin: 0;
+            padding: 0;
+        }
+        ul li a {
+            color: rgb(31, 29, 29);
+            text-decoration: none;
+            font-size: 18px;
+        }
+        ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu-container">
+        <div class="logo">MyLogooo</div>
+        <ul>
+            <li><a href="#">Homeee</a></li>
+            <li><a href="#">About Usss</a></li>
+            <li><a href="#">Portfoliooo</a></li>
+            <li><a href="#">Contacttt</a></li>
+            <li><a href="#">มุแฮะๆ ~ ~ ~</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-box {
+            display: flex;
+            flex-direction: column;
+            gap: 10px; 
+            background: #f0f0f0;
+            padding: 15px;
+            border: 2px solid #ccc;
+            height: 200px;
+        }
+        .item {
+            background: navy;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .stretch .item{
+            height: auto;
+            background: teal;
+        }
+    </style>
+</head>
+<body>
+    <h2>1) Justify-content: center (ลูกอยู่กึ่งกลาง "แนวตั้ง")</h2>
+    <div class="flex-box" style="justify-content: center;">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+    <h2>2) Justify-content: space-between (กระจายบน-ล่าง)</h2>
+    <div class="flex-box" style="justify-content: space-between;">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+    <h2>3)align-items: center (ลูกอยู่กึ่งกลาง "แนวนอน")</h2>
+    <div class="flex-box" style="align-items: center;">
+        <div class="item" style="width: 60px;">1</div>
+        <div class="item" style="width: 80px;">2</div>
+        <div class="item" style="width: 40px;">3</div>
+    </div>
+    <h2>4) Align-items: stretch (ลูกถูกยึดเต็มความกว้างแนวนอน)</h2>
+    <div class="flex-box stretch" style="align-items: stretch;">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>    
+</body>
+</html>

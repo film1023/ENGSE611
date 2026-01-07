@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .block-example div {
+            display: block;
+            padding: 10px;
+            margin-bottom: 5px;
+            background: skyblue;
+        }
+        .inline-example span {
+            display: inline;
+            padding: 5px;
+            margin-right: 5px;
+            background: lightgreen;
+        }
+        .inline-block-example div {
+            display: inline-block;
+            width: 120px;
+            height: 40px;
+            margin-right: 10px;
+            background: lightcoral;
+            text-align: center;
+            line-height: 40px;
+            border: 1px solid skyblue;
+        }
+
+        .box {
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #a0d8ff;
+            border: 2px solid #0077aa;
+            font-size: 20px;
+        }
+        .none {
+            display: none;
+        }
+        .hidden {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    
+    <h2>CSS Display Properties</h2>
+
+    <h3>Block Display</h3>
+    <p>กินพื้นที่เต็มบรรทัด และขึ้นบรรทัดใหม่เสมอ</p>
+    <div class="block-example">
+        <div>Block Element 1</div>
+        <div>Block Element 2</div>
+        <div>Block Element 3</div>
+    </div>
+
+    <h3>Inline Display</h3>
+    <p>อยู่ในบรรทัดเดียวกัน และไม่สามารถกำหนดขนาดได้</p>
+    <div class="inline-example">
+        <span>Inline Element 1</span>
+        <span>Inline Element 2</span>
+        <span>Inline Element 3</span>
+    </div>
+
+    <h3>Inline-Block Display</h3>
+    <p>รวมข้อดีของ inline และ block ไม่ขึ้นบรรทัดใหม่ + กำหนดขนาดได้</p>
+    <div class="inline-block-example">
+        <div>Box 1</div>
+        <div>Box 2</div>
+        <div>Box 3</div>
+    </div>
+
+    <h2>แสดงผลปกติ</h2>
+    <div class="box">Box 1 (ปกติ)</div>
+
+    <h2>display: none; → หายไปจากหน้าเว็บ</h2>
+    <div class="box none">Box 2 (display:none หายไป)</div>
+    <div class="box">Box 3 (จะชิดขึ้นมาทันทีเพราะ Box 2 หายไป)</div>
+
+    <h2>visibility: hidden; → ซ่อน แต่ยังคงพื้นที่</h2>
+    <div class="box hidden">Box 4 (visibility:hidden ซ่อนแต่ยังคงขนาด)</div>
+    <div class="box">Box 5 (ไม่ขยับขึ้น เพราะ Box 4 ยังมีพื้นที่อยู่)</div>
+</body>
+</html>
