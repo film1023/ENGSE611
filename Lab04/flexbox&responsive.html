@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox กับ Responsive</title>
+    <style>
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        /*ก่อนเมนู (Flex Container)*/
+        .flex-container {
+            display: flex;
+            flex-direction: column; /* เริ่มต้นเรียงแนวดิ่ง */
+            gap: 15px;
+            background: #e9edf2;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        
+        .item {
+            background: #3498db;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        
+        /*แท็บเล็ตขึ้นไป (768px ขึ้นไป)*/
+        @media (min-width: 768px) {
+            .flex-container {
+                flex-direction: row; /* เรียงแนวนอน */
+                flex-wrap: wrap; /* อนุญาตให้ตัดบรรทัด */
+            }
+            
+            .item {
+                flex: 1 1 45%; /* 2 คอลัมน์ต่อแถว */
+            }
+        }
+        
+        /*คอมพิวเตอร์ขึ้นไป (1024px ขึ้นไป)*/
+        @media (min-width: 1024px) {
+            .flex-container {
+                flex-wrap: nowrap; /* ไม่ตัดบรรทัด */
+            }
+            
+            .item {
+                flex: 1; /* ทุกคอลัมน์กว้างเท่ากัน */
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Flexbox กับ Responsive</h1>
+    <div class="flex-container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+    </div>
+</body>
+</html>
