@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested forLoop</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            font-size: 18px;
+        }
+        #output {
+            white-space: pre-line;
+            background-color: #c4def6;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+    </style>
+
+</body>
+    <h3>Output:</h3>
+<pre id="output"></pre>
+
+<script>
+    let buffer = "";
+    let size = 8;
+
+    for (let i = 1; i <= size; i++) {
+        for (let j = 1; j <= i; j++) {
+            buffer += j;
+        }
+        buffer += "\n";
+    }
+
+    // แสดงผลในหน้าเว็บ
+    document.getElementById("output").textContent = buffer;
+
+    // แสดงผลในคอนโซล
+    console.log("=== Console Output ===");
+    console.log(buffer);
+</script>
+</html>

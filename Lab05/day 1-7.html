@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 Day</title>
+
+    <style>
+        body {
+            font-family: "Prompt", sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>แปลงเลขวัน 1-7 เป็นชื่อวัน</h1>
+    <input type="number" id="dayInput" placeholder="1-7" min="1" max="7">
+
+<button onclick="convertDay()">แปลงค่า</button>
+
+<div id="output">ผลลัพธ์จะแสดงที่นี่...</div>
+
+<script>
+function convertDay() {
+    let day = Number(document.getElementById("dayInput").value);
+    let text = "";
+    switch (day) {
+        case 1:
+            text = "วันจันทร์";
+            break;
+        case 2:
+            text = "วันอังคาร";
+            break;
+        case 3:
+            text = "วันพุธ";
+            break;
+        case 4:
+            text = "วันพฤหัสบดี";
+            break;
+        case 5:
+            text = "วันศุกร์";
+            break;
+        case 6:
+            text = "วันเสาร์";
+            break;
+        case 7:
+            text = "วันอาทิตย์";
+            break;
+        default:
+            text = "😊 กรุณากรอกเลข 1️⃣ ถึง 7️⃣ เท่านั้น";
+    }
+    // แสดงผลบนหน้าเว็บ
+    document.getElementById("output").textContent = text;
+    // แสดงผลใน console
+    console.log("เลขที่กรอก:", day);
+    console.log("ชื่อวัน:", text);
+}
+</script>
+</body>
+</html>
