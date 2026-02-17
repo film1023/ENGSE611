@@ -1,0 +1,46 @@
+body {
+    font-family: "Prompt", sans-serif;
+    padding: 20px;
+    background: #f5f5f5;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+#inputBox {
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 200px;
+}
+
+#outputBox {
+    padding: 15px;
+    border-radius: 10px;
+    background: #111;
+    color: #dcdcdc;
+    margin-bottom: 20px;
+    white-space: pre-wrap;
+    font-family: Consolas, monospace;
+    border-left: 4px solid #00d26a;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    background: #00bfff;
+    border: none;
+    color: white;
+}
+
+button:hover {
+    background: #0095d6;
+}

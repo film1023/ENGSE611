@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grade Check</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>ตรวจเกรดนักศึกษา</h1>
+
+<div id="inputBox">
+    <input type="number" id="scoreInput" placeholder="ใส่คะแนน 0 - 100" min="0" max="100">
+</div>
+
+<div id="outputBox">ผลลัพธ์จะปรากฏที่นี่...</div>
+
+<button onclick="runCode()">Run Code</button>
+
+<script>
+function runCode() {
+    const output = [];
+    let score = Number(document.getElementById("scoreInput").value);
+    let grade = "";
+    let result = "";
+
+    if (isNaN(score) || score < 0 || score > 100) {
+        document.getElementById("outputBox").textContent = "กรุณาใส่คะแนน 0 - 100";
+        return;
+    }
+
+    // คำนวณเกรด
+    if (score >= 80) grade = "A";
+    else if (score >= 70) grade = "B";
+    else if (score >= 60) grade = "C";
+    else if (score >= 50) grade = "D";
+    else grade = "F";
+
+    // ผ่าน / ไม่ผ่าน
+    result = (score >= 50) ? "ผ่าน" : "ไม่ผ่าน";
+
+    output.push("คะแนน: " + score);
+    output.push("เกรด: " + grade);
+    output.push("ผลสอบ: " + result);
+
+    document.getElementById("outputBox").textContent = output.join("\n");
+}
+
+// กด Enter เพื่อรัน
+document.getElementById("scoreInput").addEventListener("keypress", function(e){
+    if(e.key === "Enter") runCode();
+});
+</script>
+
+</body>
+</html>

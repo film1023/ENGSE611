@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grade Switch</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>การตรวจสอบเกรด (Switch Statement)</h1>
+
+<div id="outputBox">กด Run Code เพื่อสุ่มคะแนน...</div>
+
+<button onclick="runCode()">Run Code</button>
+
+<script>
+function runCode() {
+    const output = [];
+
+    // ⭐ สุ่มคะแนน 0-100
+    let score = Math.floor(Math.random() * 101);
+
+    let grade = "";
+    let result = "";
+    let description = "";
+
+    // if / else ตัดเกรด
+    if (score >= 80) grade = "A";
+    else if (score >= 70) grade = "B";
+    else if (score >= 60) grade = "C";
+    else if (score >= 50) grade = "D";
+    else grade = "F";
+
+    // ผ่าน / ไม่ผ่าน
+    result = (score >= 50) ? "ผ่าน" : "ไม่ผ่าน";
+
+    // switch อธิบายเกรด
+    switch(grade){
+        case "A":
+            description = "ยอดเยี่ยมมาก";
+            break;
+        case "B":
+            description = "ดีมาก รักษามาตรฐานไว้";
+            break;
+        case "C":
+            description = "ผ่านเกณฑ์ระดับดี";
+            break;
+        case "D":
+            description = "พอใช้ แต่ควรพัฒนาเพิ่ม";
+            break;
+        case "F":
+            description = "ต้องลงทะเบียนเรียนใหม่";
+            break;
+    }
+
+    // แสดงผล
+    output.push("คะแนนที่สุ่มได้: " + score);
+    output.push("เกรด: " + grade);
+    output.push("ผลสอบ: " + result);
+    output.push("คำอธิบาย: " + description);
+
+    console.log(output.join("\n"));
+    document.getElementById("outputBox").textContent = output.join("\n");
+}
+</script>
+
+</body>
+</html>
