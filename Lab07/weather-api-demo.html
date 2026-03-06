@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>ตัวอย่าง Weather API</title>
+<style>
+body{
+    font-family: Arial, sans-serif;
+}
+
+#output {
+    margin-top: 25px;
+    background: #222;
+    color: #0f0;
+    padding: 12px;
+    border-radius: 10px;
+    font-family: Consolas, monospace;
+    white-space: pre-wrap;
+    max-height: 220px;
+    overflow-y: auto;
+}
+</style>
+</head>
+<body>
+<h2>ตัวอย่าง Weather API</h2>
+<h3>อำเภอดอยสะเก็ด จังหวัดเชียงใหม่</h3>
+<button id="loadWeather">โหลดข้อมูลสภาพอากาศ</button>
+<div id="output">กดปุ่มเพื่อโหลดข้อมูล...</div>
+
+<script>
+// ดึง element จากหน้าเว็บ
+const button = document.getElementById("loadWeather");
+const output = document.getElementById("output");
+
+// เมื่อกดปุ่มให้เรียก API
+button.addEventListener("click", async () => {
+    const url =
+    "https://api.open-meteo.com/v1/forecast" +
+    "?latitude=18.878&longitude=99.136" +
+    "&current=temperature_2m,relative_humidity_2m,wind_speed_10m";
+
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error("ไม่สามารถเชื่อมต่อ API ได้");
+        }
+        const data = await response.json();
+        const weather = data.current;
+        output.textContent =
+        "สถานที่ : อำเภอดอยสะเก็ด จังหวัดเชียงใหม่\n" +
+        "อุณหภูมิ : " + weather.temperature_2m + " °C\n" +
+        "ความชื้น : " + weather.relative_humidity_2m + " %\n" +
+        "ความเร็วลม : " + weather.wind_speed_10m + " km/h\n" +
+        "เวลา : " + weather.time;
+        console.log(data);
+    } catch (error) {
+        output.textContent = "เกิดข้อผิดพลาด : " + error.message;
+    }
+});
+</script>
+</body>
+</html>
